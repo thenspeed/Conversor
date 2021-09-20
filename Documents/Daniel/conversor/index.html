@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="page-title">
+          Conversor de moedas
+        </h1>
+        <p class="page-subtitle">
+          Descubra os valores 
+        </p>
+        <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-conversor-de-moedas.svg" class="page-logo" alt=""><br><br>
+        <label id="tipo" for="moeda">Insira o valor em real</label><br>
+         <select  required name="valores" id="valores" onchange="change(this)">
+             <option  disabled selected value="">Escolha uma operação</option>
+             <option value="real">Real</option>
+             <option value="dolar">Dolar</option>
+             <option value="euro">Euro</option>
+             <option value="libra">Libra</option>
+         </select>
+        <input type="number" id="valor" size="2" placeholder="insira um valor..." /><br>
+        <button type="submit" name="real"  onclick="ConverterReal(this)">Real</button>
+        <button type="submit" name="dolar" onclick="ConverterDolar(this)">Dolar</button>
+        <button type="submit" name="libra" onclick="ConverterLibra(this)">Libra</button>
+        <button type="submit" name="euro"  onclick="ConverterEuro(this)">Euro</button>
+   
+        <h2 id="valorConvertido"></h2>
+      </div>
+     
+   
+        <script src="index.js"></script> 
+    </body>
+</html>
